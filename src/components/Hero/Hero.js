@@ -2,7 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
-import styles from "./Hero.module.scss"
+import cn from "./Hero.module.scss"
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
@@ -38,13 +38,13 @@ const Hero = () => {
   const postUrl = data.post.edges[0].node.fields.slug
 
   return (
-    <article className={styles.wrapper}>
-      <Link to={postUrl} className={styles.link}>
+    <article className={cn.wrapper}>
+      <Link to={postUrl} className={cn.link}>
         <Img
           fluid={data.banner.childImageSharp.fluid}
-          className={styles.heroImage}
+          className={cn.heroImage}
         />
-        <div className={styles.postData}>
+        <div className={cn.postData}>
           <h2>{title}</h2>
         </div>
       </Link>

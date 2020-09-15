@@ -2,12 +2,12 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 
 import MobileMenu from "../Mobile-menu/Mobile-menu"
+import Navigation from "../Navigation/Navigation"
 
 import logo from "../../assets/logo.svg"
-import Navigation from "../Navigation/Navigation"
 import hamburger from "../../assets/open-menu.svg"
 
-import cn from "./header.module.scss"
+import cn from "./Header.module.scss"
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
