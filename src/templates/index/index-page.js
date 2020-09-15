@@ -33,6 +33,17 @@ export const query = graphql`
           id
           frontmatter {
             title
+            tags
+            date
+            description
+            featuredimage {
+              id
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
           }
           timeToRead
           excerpt
