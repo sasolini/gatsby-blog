@@ -1,0 +1,46 @@
+// *** BREAK POINS ***
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm: 576px;
+// Small tablets (portrait view)
+$screen-md: 768px;
+// Tablets and small desktops
+$screen-lg: 992px;
+// Large tablets and desktops
+$screen-xl: 1200px;
+
+// *** LAYAOUT ***
+$page-width: 1300px;
+$post-width: 600px;
+
+// *** COLOR ***
+$color-light: hsl(0, 0%, 100%);
+$color-dark: hsl(208, 100%, 3%);
+$color-dark-a30: hsla(208, 100%, 3%, 0.3);
+$color-gray-lighter: hsl(207, 25%, 95%);
+$color-gray-light: hsl(207, 25%, 80%);
+$color-gray: hsl(207, 8%, 46%);
+$color-primary: hsl(208, 100%, 40%);
+$color-primary-light: hsl(208, 100%, 52%);
+$color-gradient-light: hsl(207, 73%, 94%);
+$color-gradient-dark: hsl(188, 86%, 84%);
+
+// *** FONTS ***
+// fonts family
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Oswald&display=swap");
+$fonts-primary: "Lato", sans-serif;
+$fonts-secondary: "Oswald", sans-serif;
+
+//font sizes
+$text-size-xs: 1rem;
+$text-size-s: 1.4rem;
+$text-size-m: 1.8rem;
+$text-size-l: 2.2rem;
+$text-size-xl: 2.8rem;
+
+//spacing
+$spacing-xs: 0.5rem;
+$spacing-s: 0.8rem;
+$spacing-m: 1rem;
+$spacing-l: 1.5rem;
+$spacing-xl: 2rem;

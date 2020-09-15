@@ -1,0 +1,30 @@
+@import "../../styles/variables";
+
+.btn {
+  display: inline-block;
+  font-family: $fonts-secondary;
+  font-size: $text-size-s;
+  text-transform: uppercase;
+  color: $color-light;
+  background-color: $color-primary-light;
+  border: 1px solid $color-primary-light;
+  padding: $spacing-xs $spacing-m;
+  text-align: center;
+
+  &:hover {
+    color: $color-primary;
+    background-color: $color-light;
+    border: 1px solid $color-primary;
+  }
+
+  &.inverted {
+    color: $color-primary;
+    background-color: $color-light;
+    border: 1px solid $color-primary;
+    &:hover {
+      color: $color-light;
+      background-color: $color-primary-light;
+      border: 1px solid $color-primary-light;
+    }
+  }
+}

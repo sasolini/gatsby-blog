@@ -1,0 +1,28 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.blog-roll {
+  max-width: $page-width;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: min-content;
+  padding: $spacing-s;
+  grid-gap: $spacing-xl;
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+    padding: $spacing-xl;
+  }
+
+  @include xl {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.load-btn {
+  display: block;
+  padding: $spacing-l;
+  width: 25rem;
+  margin: $spacing-l auto 0 auto;
+}

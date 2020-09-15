@@ -1,0 +1,22 @@
+@import "../../styles/variables";
+
+.nav-items {
+  font-family: $fonts-secondary;
+  display: flex;
+  list-style-type: none;
+
+  a {
+    padding: 0.5rem 1rem;
+    margin: 0 2rem;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $color-light;
+      background-color: $color-primary-light;
+    }
+  }
+
+  .active {
+    border-bottom: 2px solid $color-primary;
+  }
+}

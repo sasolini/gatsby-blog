@@ -1,0 +1,24 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  padding: $spacing-s $spacing-m 0 $spacing-m;
+  max-width: $page-width;
+  margin: 0 auto;
+
+  @include md {
+    padding: $spacing-s $spacing-xl 0 $spacing-xl;
+  }
+
+  .previous {
+    // display: inline-block;
+    // margin-right: auto;
+  }
+
+  .next {
+    // display: inline-block;
+    margin-left: auto;
+  }
+}

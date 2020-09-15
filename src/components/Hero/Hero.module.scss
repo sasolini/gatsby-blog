@@ -1,0 +1,73 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.wrapper {
+  position: relative;
+  height: calc(80vh - 7rem);
+
+  @include sm {
+    height: unset;
+  }
+}
+
+.link {
+  &:hover {
+    .hero-image {
+      opacity: 0.9;
+    }
+  }
+}
+
+.hero-image {
+  height: 100%;
+
+  @include sm {
+    max-height: 50rem;
+  }
+}
+
+.post-data {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  padding: $spacing-l $spacing-l $spacing-xl * 2 $spacing-l;
+  color: $color-light;
+  background: $color-dark-a30;
+  background: linear-gradient(0deg, $color-dark 10%, transparent 100%);
+  text-align: center;
+  z-index: 1;
+  transform: translate(-50%);
+
+  &:hover {
+    color: $color-light;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: $text-size-m * 2;
+    line-height: $text-size-l * 2;
+
+    &:hover {
+      color: $color-light;
+    }
+
+    @include sm {
+      // color: red;
+      font-size: $text-size-l * 2;
+      line-height: $text-size-xl * 2;
+    }
+
+    @include md {
+      // color: blue;
+      font-size: $text-size-xl * 2;
+      line-height: $text-size-xl * 3;
+    }
+
+    @include lg {
+      // color: purple;
+      font-size: $text-size-xl * 3;
+      line-height: $text-size-xl * 4;
+    }
+  }
+}
