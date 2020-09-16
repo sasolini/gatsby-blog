@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 
 import Layout from "../components/Layout/Layout"
 import ConactForm from "../components/Contact-form/Contact-form"
+import SEO from "../components/seo"
 
 import cn from "./contact.module.scss"
 
@@ -28,6 +29,7 @@ const ContactPage = () => {
 
   return (
     <Layout>
+      <SEO title="Contact" />
       <div className={cn.hero}>
         <Img fluid={futureImg} alt="future" className={cn.image} />
         <div className={cn.title}>

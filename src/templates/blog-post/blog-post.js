@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../../components/Layout/Layout"
+import SEO from "../../components/seo"
 
 import cn from "./blog-post.module.scss"
 
@@ -11,6 +12,7 @@ const BlogPost = ({ data }) => {
   const futrueImg = post.frontmatter.featuredimage.childImageSharp.fluid
   return (
     <Layout>
+      <SEO title={post.frontmatter.title} />
       <div className={cn.hero}>
         <Img fluid={futrueImg} alt="future" className={cn.image} />
         <div className={cn.title}>

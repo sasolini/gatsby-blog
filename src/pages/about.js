@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/Layout/Layout"
+import SEO from "../components/seo"
 
 import cn from "./about.module.scss"
 
@@ -27,6 +28,7 @@ const BlogPost = () => {
 
   return (
     <Layout>
+      <SEO title="About" />
       <div className={cn.hero}>
         <Img fluid={futureImg} alt="future" className={cn.image} />
         <div className={cn.title}>

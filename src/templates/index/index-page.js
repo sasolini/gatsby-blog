@@ -4,10 +4,12 @@ import Layout from "../../components/Layout/Layout"
 import Hero from "../../components/Hero/Hero"
 import BlogRoll from "../../components/Blog-roll/Blog-roll"
 import Pager from "../../components/Pager/Pager"
+import SEO from "../../components/seo"
 
 const HomePage = ({ data, pageContext }) => {
   return (
     <Layout>
+      <SEO title="TechWords" />
       <Hero />
       <BlogRoll data={data} pageContext={pageContext} />
       <Pager
