@@ -21,7 +21,7 @@ const HomePage = ({ data, pageContext }) => {
 export default HomePage
 
 export const query = graphql`
-  query($skip: Int! = 1, $limit: Int!) {
+  query($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { order: DESC, fields: frontmatter___date }
       skip: $skip

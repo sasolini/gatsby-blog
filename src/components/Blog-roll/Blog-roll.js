@@ -4,13 +4,21 @@ import PostCard from "../../components/Post-card/Post-card"
 
 import styles from "./Blog-roll.module.scss"
 
-const BlogRoll = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges
-  const withoutFirstPost = posts.slice(1)
+const BlogRoll = ({ data, pageContext }) => {
+  let posts = []
+  const allPosts = data.allMarkdownRemark.edges
+  const withoutFirstPost = allPosts.slice(1)
+
+  if (pageContext.pageNumber === 0) {
+    posts = withoutFirstPost
+  } else {
+    posts = allPosts
+  }
+
   return (
     <>
       <section className={styles.blogRoll}>
-        {withoutFirstPost.map(({ node: post }) => {
+        {posts.map(({ node: post }) => {
           const id = post.id
           const title = post.frontmatter.title
           const excerpt = post.excerpt

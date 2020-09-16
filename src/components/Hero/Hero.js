@@ -17,6 +17,14 @@ const Hero = () => {
             id
             frontmatter {
               title
+              featuredimage {
+                id
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
             }
             fields {
               slug
@@ -36,14 +44,13 @@ const Hero = () => {
 
   const title = data.post.edges[0].node.frontmatter.title
   const postUrl = data.post.edges[0].node.fields.slug
+  const featuredImage =
+    data.post.edges[0].node.frontmatter.featuredimage.childImageSharp.fluid
 
   return (
     <article className={cn.wrapper}>
       <Link to={postUrl} className={cn.link}>
-        <Img
-          fluid={data.banner.childImageSharp.fluid}
-          className={cn.heroImage}
-        />
+        <Img fluid={featuredImage} className={cn.heroImage} />
         <div className={cn.postData}>
           <h2>{title}</h2>
         </div>

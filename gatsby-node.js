@@ -33,15 +33,14 @@ exports.createPages = async ({ graphql, actions }) => {
 
   //add error catch
 
-  const withoutFirstPost = blogPosts.data.allMarkdownRemark.edges.slice(1)
-
   const pathPrefix = ({ pageNumber, numberOfPages }) =>
     pageNumber === 0 ? "/" : "/blog"
 
   paginate({
     createPage, // The Gatsby `createPage` function
-    items: withoutFirstPost, // An array of objects
-    itemsPerPage: 6, // How many items you want per page
+    items: blogPosts.data.allMarkdownRemark.edges, // An array of objects
+    itemsPerPage: 6,
+    itemsPerFirstPage: 7, // How many items you want per page
     pathPrefix, // Creates pages like `/blog`, `/blog/2`, etc
     component: path.resolve(`src/templates/index/index-page.js`), // Just like `createPage()`
   })
